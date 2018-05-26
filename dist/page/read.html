@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/read.css">
+</head>
+
+<body>
+    <script class="readCont" type="text/x-handlebars-template">
+        <h3>{{t}}</h3>
+        {{#each p}}
+        <p>{{this}}</p>
+        {{/each}}
+    </script>
+    <script class="menulist" type="text/x-handlebars-template">
+        {{#each list}}
+        <li data-id="{{chapter_id}}">{{title}}</li>
+        {{/each}}
+    </script>
+    <div class="wrap">
+        <!--阅读内容-->
+        <div class="book-cont">
+
+        </div>
+        <!--目录遮罩层-->
+        <div class="book-mask">
+            <header class="header">
+                <p class="back">返回</p>
+            </header>
+            <footer class="footer">
+                <div class="f_top">
+                    <span class="prev-btn">上一章</span>
+                    <span class="f_top_num">10/3445</span>
+                    <span class="next-btn">下一章</span>
+                </div>
+                <div class="f_bottom">
+                    <div class="font-dialog">
+                        <div>
+                            <b>字号</b><span class="big-btn">大</span><span class="samll-btn">小</span>
+                        </div>
+                        <div>
+                            <b>颜色</b>
+                            <ol class="ol">
+                                <li class="back-color1"></li>
+                                <li class="back-color2"></li>
+                                <li class="back-color3"></li>
+                                <li class="back-color4"></li>
+                                <li class="back-color5"></li>
+                                <li class="back-color6"></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="menu-btn">目录</li>
+                        <li class="font-btn">字体</li>
+                        <li class="back-color">白天</li>
+                        <li class="btn-botton">下载</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <!--目录弹窗-->
+        <div class="menu-dialog">
+            <header>
+                <p class="back">返回</p>
+                <span>目录</span>
+            </header>
+            <main>
+                <ul></ul>
+            </main>
+        </div>
+    </div>
+    <script src="../js/lib/require.js"></script>
+    <script>
+        require(['../js/main'], function() {
+            require(['read'])
+        });
+    </script>
+</body>
+
+</html>

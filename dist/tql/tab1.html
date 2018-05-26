@@ -1,0 +1,11 @@
+<a href="page/search.html" class="top-home__search">搜索</a>
+<!--轮播-->
+<div class="swiper-container index-banner swiper-no-swiping">
+    <ul class="swiper-wrapper">
+        {{#each data0.data.data}}
+        <li class="swiper-slide">
+            <a href="/page/detail.html?indexId={{fiction_id}}"><img src="{{ad_pic_url}}"></a>
+        </li>
+        {{/each}}
+    </ul>
+</div>

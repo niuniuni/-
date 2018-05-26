@@ -1,0 +1,1 @@
+"use strict";define(function(){return function(e){var r=location.search.substr(1);return r='{"'+r.replace(/=/g,'":"').replace(/&/,'","')+'"}',JSON.parse(r)[e]}});

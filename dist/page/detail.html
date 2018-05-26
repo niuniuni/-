@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telphone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <div class="wrapper"></div>
+    <script id="wrap" type="text/x-handlebars-template">
+        <div class="new-page book-page search-top" data-track="dt">
+            <div class="search">
+                <div class="top">
+                    <a href="javascript:history.back()" class="top_back"></a>
+                    <span class="top_title">{{title}}</span>
+                    <a id="Tag_88" class="header-home"></a>
+                </div>
+            </div>
+        </div>
+        <main class="content">
+            <section class="main-card">
+                <div class="u-book -detail">
+                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="352876" id="Tag__83"><img alt="驭房有术" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01I66oHszK2/7CDwQEqR7CFkXT.jpg!s">
+                        <div class="u-tagRT"></div>你
+                    </div>
+                    <div class="info">
+                        <h3 class="title">{{title}}</h3>
+                        <p class="author"><span class="author" data-href="#page=author&amp;type=fiction&amp;id=铁锁">{{authors}}</span></p>
+                        <div class="u-grade">
+                            <div class="grade grade8"></div><span class="read">{{score_count}}个评价</span></div>
+                        <p class="price">价格：{{price}}书币/千字</p>
+                        <p class="count">字数：566万字<span class="u-booktag -serial">连载中</span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="main-card" style="margin-top:-10px">
+                <div class="book-dash">
+                    <div id="Tag__84">
+                        <div class="wrap">
+                            <ul class="btn-group" vp-show="$root.needPay()" style="display: none;">
+                                <li><a class="u-btn2" vp-click="$root.readBook()"><span class="book-dash-text"></span></a></li>
+                                <li><a class="u-btn3" vp-click="$root.pay()" vp-bind="$root.payText()">undefined元</a></li>
+                            </ul>
+                            <ul class="btn-group" vp-show="!$root.needPay() &amp;&amp; !$root.is10086()">
+                                <li class="u-btn2" vp-click="$root.readBook()"><span class="book-dash-text"></span></li>
+                                <li><a class="u-btn3" vp-click="$root.download()" vp-bind="$root.downloadText()">下载</a></li>
+                            </ul>
+                            <ul class="btn-group" vp-show="!$root.needPay() &amp;&amp; $root.is10086()" style="display: none;">
+                                <li class="u-btn2" vp-click="$root.readBook()">开始阅读<span class="tip-10086">（来自和阅读）</span></li>
+                            </ul>
+                        </div>
+                        <div class="wrap2" vp-show="$root.isLimit()" style="display: none;">
+                            <div class="m-limitinfo"><em class="icn-clock"></em><span vp-bind="$root.getLimitText()">限时畅读即将结束</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-folder " id="Tag__85">
+                    <div class="folder-cnt -fold" data-href="">{{content}}
+                    </div>
+                    <div class="folder-tail">
+                        <div data-href="#page=catalog&amp;id=352876&amp;type=fiction&amp;onlyCatalog=1&amp;chapter_id=2353">最新：第2354章 我来扫你 更新于 17小时前</div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-card">
+                <div class="u-folder " id="Tag__86">
+                    <div class="folder-top">
+                        <h3>类别标签</h3>
+                    </div>
+                    <div class="folder-cnt">
+                        <ul class="m-tag -color">
+                            <li class="u-tag" data-href="#page=cate&amp;type=fiction&amp;id=8000000" title="灵异">灵异</li>
+                            <li class="u-tag" data-href="#page=tag&amp;type=fiction&amp;id=风水秘术" title="风水秘术">风水秘术</li>
+                            <li class="u-tag" data-href="#page=tag&amp;type=fiction&amp;id=灵异奇谈" title="灵异奇谈">灵异奇谈</li>
+                        </ul>
+                    </div><em class="folder-more"></em></div>
+            </section>
+            <section class="main-card -folder">
+                <div class="u-title">
+                    <h1>作者其它图书</h1>
+                </div>
+                <div class="cnt">
+                    <ul class="book-table">
+                        <li data-track="0">
+                            <div class="u-book -vertical" data-href="#page=book&amp;source_id=322205&amp;source=2" da="b.0*2_322205" expose="">
+                                <div class="book-cover Lazy_loading Lazy_loaded" data-id="322205" id="Tag__87"><img alt="美女导演的贴身判官" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p018fPMgtbmc/mHQukuz61L5OyS.jpg!s">
+                                    <div class="u-tagRT"></div>
+                                </div>
+                                <div class="info">
+                                    <h3 class="title">美女导演的贴身判官</h3>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-card -folder">
+                <div class="u-title">
+                    <h1>图书信息</h1>
+                </div>
+                <div class="cnt">
+                    <ul class="text">
+                        <li>版权：阅文集团旗下起点中文网</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+
+    </script>
+    <script src="../js/lib/require.js"></script>
+    <script>
+        require(['../js/main'], function() {
+            require(['detail'])
+        })
+    </script>
+
+</body>
+
+</html>

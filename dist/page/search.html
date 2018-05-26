@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telphone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="search-top">
+            <a href="javascript:;" class="top__back">
+                <i class="iconfont icon-xiangzuo"></i>
+            </a>
+            <div class="search-input">
+                <b class="search-input__mi"></b>
+                <input type="text" value placeholder="输入书名/作者/关键字">
+                <div class="search-btn">搜索</div>
+            </div>
+        </div>
+        <div class="searchresult">
+            
+        </div>
+    </div>
+    <script class="searchtext" type="text/x-handlebars-template">
+        {{#each ads}}
+        {{#if status}}
+        <a>{{ad_name}}</a>
+        {{else}}
+        <a class="active">{{ad_name}}</a>
+        {{/if}}
+        {{/each}}
+    </script>
+    <script class="searchlist" type="text/x-handlebars-template">
+        {{#if items.length}}
+        {{#each items}}
+                <a href="/page/detail.html?activeid={{fiction_id}}" class="aa">
+                    <dl>
+                        <dt><img src="{{cover}}">{{#if finish}}<span>完结</span>{{else}}<span>连载中</span>{{/if}}</dt>
+                        <dd>
+                            <h2>{{title}}</h2>
+                            <p>{{intro}}</p>
+                            <p>{{#each role}}
+                                <span>{{this}}</span> {{/each}}
+                            </p>
+                        </dd>
+                    </dl>
+                </a>
+        {{/each}}
+        {{else}}
+        <div>暂无数据</div>
+        {{/if}}
+    </script>
+    <script src="../js/lib/require.js"></script>
+    <script>
+        require(['../js/main'],function(){
+            require(['search'])
+        })
+    </script>
+</body>
+</html>

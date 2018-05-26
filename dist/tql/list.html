@@ -1,0 +1,19 @@
+<ul class="ul">
+    {{#each items}}
+    <li class="one">
+        <a href="/page/detail.html?indexId={{fiction_id}}">
+            <dl>
+                <dt><img src="{{cover}}">{{#if finish}}<span>完结</span>{{else}}<span>连载中</span>{{/if}}</dt>
+                <dd>
+                    <h2>{{title}}</h2>
+                    <p>{{authors}}</p>
+                    <p>{{summary}}</p>
+                    <p>{{#each tags}}
+                        <span>{{this}}</span> {{/each}}
+                    </p>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,15 @@
+<!--本周最火-->
+<div class="yi">
+    <h2>{{data1.ad_name}}</h2>
+    <ul>
+        {{#each data1.data.data}}
+        <li>
+            <a href="/page/detail.html?indexId={{fiction_id}}">
+                <img src="{{cover}}">
+                <span>{{title}}</span>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    <a dat-href="#page=topic&type=fiction&id=11059" class="channel-group__footer">查看更多</a>
+</div>
